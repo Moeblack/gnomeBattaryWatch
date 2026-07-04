@@ -1,0 +1,18 @@
+/* 查证结果：GNOME HIG 与 libadwaita 建议使用标准样式类和 CSS 变量，
+ * 因此这里不写硬编码颜色；Cairo 图表颜色由主题节点与用户配置共同决定。
+ */
+
+.power-energy-box {
+    spacing: 6px;
+    padding: 0 8px;
+}
+
+.power-energy-box StLabel {
+    font-weight: bold;
+}
+
+.power-energy-chart {
+    border-radius: 8px;
+    margin: 4px 8px;
+    color: var(--accent-color);
+}

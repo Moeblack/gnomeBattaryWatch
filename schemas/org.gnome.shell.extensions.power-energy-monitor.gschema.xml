@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.power-energy-monitor"
+          path="/org/gnome/shell/extensions/power-energy-monitor/">
+    <key name="sample-interval-seconds" type="i">
+      <default>5</default>
+      <range min="1" max="60"/>
+      <summary>采样间隔</summary>
+      <description>多久采集一次电池数据，单位为秒。</description>
+    </key>
+    <key name="raw-retention-hours" type="i">
+      <default>1</default>
+      <range min="0" max="720"/>
+      <summary>原始数据保留时长</summary>
+      <description>原始采样数据的保留时长，单位为小时，0 表示永久保留。</description>
+    </key>
+    <key name="mid-retention-days" type="i">
+      <default>30</default>
+      <range min="0" max="3650"/>
+      <summary>中粒度数据保留时长</summary>
+      <description>1 分钟聚合数据的保留时长，单位为天，0 表示永久保留。</description>
+    </key>
+    <key name="coarse-retention-days" type="i">
+      <default>365</default>
+      <range min="0" max="3650"/>
+      <summary>粗粒度数据保留时长</summary>
+      <description>1 小时聚合数据的保留时长，单位为天，0 表示永久保留。</description>
+    </key>
+    <key name="default-time-range" type="s">
+      <choices>
+        <choice value="5m"/>
+        <choice value="15m"/>
+        <choice value="1h"/>
+        <choice value="5h"/>
+        <choice value="12h"/>
+        <choice value="1d"/>
+        <choice value="3d"/>
+        <choice value="1w"/>
+        <choice value="custom"/>
+      </choices>
+      <default>"1h"</default>
+      <summary>默认时间范围</summary>
+      <description>图表默认显示的历史时间范围。</description>
+    </key>
+    <key name="default-view" type="s">
+      <choices>
+        <choice value="power"/>
+        <choice value="energy"/>
+        <choice value="remaining"/>
+      </choices>
+      <default>"power"</default>
+      <summary>默认图表视图</summary>
+      <description>图表默认显示功率曲线、剩余能量曲线还是剩余时间曲线。</description>
+    </key>
+    <key name="chart-color" type="s">
+      <default>"#3584e4"</default>
+      <summary>图表曲线颜色</summary>
+      <description>图表曲线颜色，使用十六进制 RGB 字符串。</description>
+    </key>
+    <key name="persist-to-disk" type="b">
+      <default>true</default>
+      <summary>持久化到磁盘</summary>
+      <description>是否将历史数据写入用户配置目录。</description>
+    </key>
+    <key name="custom-range-value" type="i">
+      <default>30</default>
+      <range min="1" max="365"/>
+      <summary>自定义时间范围数值</summary>
+      <description>自定义时间范围的数值部分。</description>
+    </key>
+    <key name="custom-range-unit" type="s">
+      <choices>
+        <choice value="m"/>
+        <choice value="h"/>
+        <choice value="d"/>
+      </choices>
+      <default>"m"</default>
+      <summary>自定义时间范围单位</summary>
+      <description>自定义时间范围的单位，可选分钟、小时或者天。</description>
+    </key>
+  </schema>
+</schemalist>

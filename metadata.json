@@ -1,0 +1,8 @@
+{
+    "uuid": "power-energy-monitor@moeblack.github.io",
+    "name": "Power & Energy Monitor",
+    "description": "在顶栏显示电池功耗、剩余能量与预计剩余时间，展示近期变化曲线，支持多级数据保留与持久化。",
+    "shell-version": ["45", "46", "47", "48", "49", "50"],
+    "url": "https://github.com/moeblack/DailyDairy",
+    "settings-schema": "org.gnome.shell.extensions.power-energy-monitor"
+}
