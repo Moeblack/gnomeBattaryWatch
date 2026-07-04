@@ -3,3 +3,6 @@
 *~
 .flatpak-builder/
 build/
+*.shell-extension.zip
+.agents/
+.codex/
